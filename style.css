@@ -41,6 +41,9 @@ img, video {
   padding: 2rem;
 }
 
+
+
+
 /* HEADER */
 header {
   display: flex;
@@ -211,6 +214,8 @@ header {
 /* GALLERY SECTION */
 .section-gallery {
   padding: 50px 0;
+  background-color: black;
+  color: #fbfbfb;
 }
 .gallery-grid {
   display: grid;
