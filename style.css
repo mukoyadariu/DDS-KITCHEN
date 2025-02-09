@@ -61,6 +61,7 @@ header {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .navbar .nav-items {
   display: flex;
@@ -74,6 +75,7 @@ header {
   background: -webkit-linear-gradient(var(--primary-color-alt), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .nav-link::before {
   content: "";
@@ -155,6 +157,7 @@ header {
   font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
+  background-clip: text;
 }
 .slogan .company-slogan {
   background: -webkit-linear-gradient(100deg, var(--primary-color-alt), var(--primary-color));
@@ -165,6 +168,7 @@ header {
   font-weight: 400;
   line-height: 1.8rem;
   max-width: 50rem;
+  background-clip: text;
 }
 
 /* ABOUT SECTION */
@@ -250,14 +254,37 @@ header {
 /* SPECIAL PACKAGES SECTION */
 .section-packages {
   padding: 50px 0;
+  background-color: black;
 }
 .package-item {
   padding: 20px;
-  background-color: var(--white-color);
-  border: 1px solid var(--second-color);
+  background-color: black;
+  border: 10px solid var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fbfbfb;
+  font-weight: bolder;
+  font-size: large;
+}
+.package-photo {
+  width: 70%;
+  height: 70%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+.package-date {
+  font-weight: bold;
+  background-color: RGB(212, 175, 55);
+  font-size: xx-large;
+}
+
 
 /* FOOTER */
 footer {
