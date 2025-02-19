@@ -10,6 +10,10 @@
     --box-shadow: 10px 10px 5px rgba(0,0,0,.3);
 }
 
+html{
+    font-size: 70%;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,13 +21,68 @@
     font-family: "poppins";
 }
 
+/* Utality classes start */
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+/* Utality classes close */
+
 /* header start */
 header{
     width: 100%;
-    background: rgba(0,0,0,.3);
+    background: var(--black_color);
     position: fixed;
+    padding: 1.5rem 0;
 }
 
+.logo img{
+    display: block;
+    object-fit: cover;
+    width: 20%;
+}
 
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.navbar nav{
+    display:flex;
+    align-items: center;
+}
+
+.navbar nav li{
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+.navbar nav li a{
+    font-size: 1.3rem;
+    color: var(--primary_color);
+    position:relative;
+}
+
+.navbar nav li a::after{
+    content: "";
+    position: absolute;
+    height:3px;
+    background:var(--primary_color);
+    width: 0%;
+    left: 0;
+    top: 30px;
+    transition: all 0.5s ease-in-out;
+}   
+
+.navbar nav li a:hover::after{
+    width: 100%;
+}
 
 /* header close */
