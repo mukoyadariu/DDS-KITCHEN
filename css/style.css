@@ -40,7 +40,7 @@ a{
 .normal_heading{
     font-size: 2rem;
     font-family: var(--righteous);
-    color: var(--black_color);
+    color: var(--primary_color);
 }
 
 /* Utality classes close */
@@ -260,10 +260,10 @@ margin-left: auto;
 }
 
 .form_data{
-    background: var(--primary_color);
+    background: var(--black_color);
     padding: 4rem;
     width: 50%;
-    color: var(--black_color);
+    color: var(--primary_color);
 }
 
 .form_data form{
@@ -298,6 +298,12 @@ margin-left: auto;
 .form_data form button:hover{
     background: var(--black_color);
     color: #ddd;
+}
+
+.logo2 img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
 }
 /* reservation now close */
 
