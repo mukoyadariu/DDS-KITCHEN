@@ -35,12 +35,29 @@ a{
 .main_heading{
     font-size: 4rem;
     font-family: var(--righteous);
+    text-align: center;
+    color: #000;
 }
 
 .normal_heading{
     font-size: 2rem;
     font-family: var(--righteous);
     color: var(--primary_color);
+    text-align: center;
+}
+
+.main_heading-1{
+    font-size: 4rem;
+    font-family: var(--righteous);
+    text-align: center;
+    color: #d4af37;
+}
+
+.normal_heading-1{
+    font-size: 4rem;
+    font-family: var(--righteous);
+    color: var(--primary_color);
+    text-align: center;
 }
 
 /* Utality classes close */
@@ -232,13 +249,13 @@ margin-left: auto;
 
 .img_right_side .over_img{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: -10%;
+    right: 50%;
+    transform: translate(50%,50%);
     padding: 4rem;
     text-align: center;
-    background: var(--black_color);
-    color: white;
+    background: var(--primary_color);
+    color:var(--black_color);
     border-radius: 60%;
 }
 
@@ -307,3 +324,32 @@ margin-left: auto;
 }
 /* reservation now close */
 
+/* Deals today start */
+#deal_today{
+    padding: 5rem 0;
+    background:url(../img/top-view-fresh-tomatoes-with-seasonings-mushrooms-dark-surface-ripe-salad-food-color.jpg) no-repeat center center/cover;
+    color: #d4af37;
+}
+
+#deal_today .card_content{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+#deal_today .cards{
+    margin: 3rem 0;
+}
+
+#deal_today .card_content h4{
+    font-family: var(--ubuntu);
+    font-size: 2rem;
+    color: #d4af37;
+}
+
+#deal_today .card_content .price{
+    font-size: 2rem;
+    color: var(--primary_color);
+    font-weight: 600;
+}
+/* Deals today close */
