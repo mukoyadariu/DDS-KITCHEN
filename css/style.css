@@ -7,8 +7,11 @@
 
     --ubuntu: "ubuntu";
     --righteous: "righteous";
-    
+
     --box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+    --padding: 10rem 0;
+    --margin: 4rem 0;
+    --border: 1px solid #ddd;
 }
 
 html{
@@ -330,7 +333,7 @@ margin-left: auto;
 /* Deals today start */
 #deal_today{
     padding: 5rem 0;
-    background:url(../img/top-view-fresh-tomatoes-with-seasonings-mushrooms-dark-surface-ripe-salad-food-color.jpg) no-repeat center center/cover;
+    background:url(../img/food\ background.jpeg) no-repeat center center/cover;
     color: #d4af37;
 }
 
@@ -357,51 +360,55 @@ margin-left: auto;
 }
 /* Deals today close */
 
-/* food lover start */
-#food_lover{
-    padding: 10rem 0;
-    background: #000;
+
+
+/* food lover section */
+#food_lover {
+    padding: var(--padding);
+    background: url(../img/1.avif) no-repeat center center/cover;
 }
 
-.food_lover_container{
-    margin: 3rem 0;
+.food_lover_container {
+    margin: var(--margin);
 }
 
-.food_lover_container .btn_container{
-    margin: 4rem 0;
-    width:100%;
+.food_lover_container .btn_container {
+    margin: var(--margin);
+    width: 100%;
     display: inline-block;
     color: #000;
     text-align: center;
 }
 
-.btn_container .btn_cat{
+.btn_container .btn_cat {
     padding: 0.7rem 1.2rem;
     cursor: pointer;
     margin: 0 2rem;
-    border: 1px solid #ddd;
+    border: var(--border);
     font-size: 1.4rem;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
 }
 
-.btn_cat:hover, .active_btn{
+.btn_cat:hover, .active_btn {
     background: var(--primary_color);
     color: var(--black_color);
 }
 
-.menus_items_container{
+.menus_items_container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
 }
 
-.menus_items_container .img_cards{
-    border: 1px solid #ddd;
+.menus_items_container .img_cards {
+    border: none;
     box-shadow: var(--box-shadow);
+    width: 50%;
+    height: 50%;
 }
 
-.img_cards img{
+.img_cards img {
     display: block;
     width: 100%;
     object-fit: cover;
@@ -410,22 +417,119 @@ margin-left: auto;
     transition: all 0.5s ease-in-out;
 }
 
-.img_cards p{
+.img_cards p {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-family: var(--ubuntu);
-    color: #d4af37;
+    color: var(--white_color);
 }
 
-.img_cards .price{
+.img_cards .price {
     color: var(--primary_color);
     font-size: 1.8rem;
 }
 
-.img_cards img:hover{
+.img_cards img:hover {
     transform: scale(1.1);
 }
-
-
 /* food lover close */
+
+/* customer review section */
+#customer_feedback {
+    padding: var(--padding);
+    background: url("../img/navbarlogo.png") no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+}
+
+#customer_feedback::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+}
+
+.customer_cards_container {
+    margin: var(--margin);
+    z-index: -1;
+}
+
+.customer_card {
+    /* background: white; */
+    text-align: center;
+    padding: 3rem;
+    box-shadow: var(--box-shadow);
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.customer_card img {
+    object-fit: contain;
+    width: 30%;
+    height: 30%;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer_card p {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 2rem 0;
+    color: var(--black_color);
+    font-weight: bolder;
+}
+
+.customer_card .name {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary_color);
+}
+/* customer review close */
+
+/* upcoming events section */
+#up_coming_events {
+    background: url(../img/events\ background.webp) no-repeat center center/cover;
+    padding: var(--padding);
+}
+
+.events_cards_container {
+    margin: var(--margin);
+}
+
+.events_card {
+    /* border: var(--border); */
+    box-shadow: var(--box-shadow);
+}
+
+.events_card img {
+    display: block;
+    object-fit: cover;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.event_content {
+    padding: 2rem;
+    text-align: justify;
+}
+
+.event_content p {
+    font-size: 1.2rem;
+    color: #d4af37;
+    font-weight: bolder;
+    
+}
+
+.event_content a{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--primary_color);
+}
+/* upcoming events close */

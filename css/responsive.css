@@ -72,6 +72,31 @@
 @media(max-width:768px){
     .sp_content{
         grid-template-columns: repeat(1,1fr);
-        
         }
+
+    .form_data{
+        width: 100%;
+    }
+
+    .form_data form input{
+        width: 100%;
+    }
+
+    /* food lover start */
+    .menus_items_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* food lover close */
+
+    .btn-cat{
+        margin: 1rem 1rem;
+    }
+}
+
+@media(max-width:520px){
+    /* food lover start */
+    .menus_items_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    /* food lover close */
 }
