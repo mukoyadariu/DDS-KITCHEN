@@ -139,4 +139,44 @@ var swiper = new Swiper(".mySwiper", {
     displayMenusItem = displayMenusItem.join("");
     SectionCenter.innerHTML = displayMenusItem;
   }
-  
+// static counter start
+const countersEl = document.querySelectorAll('.num');
+
+countersEl.forEach((countersEl) => {
+  countersEl.innerText = "0";
+  increamentCounter();
+
+  function increamentCounter() {
+    let currentNum = +countersEl.innerText;
+    const dataCeil = countersEl.getAttribute("data-ceil");
+    const increament = dataCeil / 15;
+    currentNum = Math.ceil(currentNum + increament);
+
+    if (currentNum < dataCeil) {
+      countersEl.innerText = currentNum;
+      setTimeout(increamentCounter, 70);
+    } else {
+      countersEl.innerText = dataCeil;
+    }
+  }
+});
+// static counter close
+
+// Sticky menus start
+const nav = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+  if (document.documentElement.scrollTop > 20) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+});
+// Sticky menus close
+
+// Parallax effect
+const Parallax = document.querySelector('#showcase');
+window.addEventListener("scroll", function () {
+  let offset = window.scrollY;
+  Parallax.style.transform = `translateY(${offset * 0.7}px)`; 
+});
